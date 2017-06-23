@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css?family=Great+Vibes|Raleway');
+$text-font: 'Raleway', sans-serif;
+
+.App{
+    width: 100wv;
+    height: 100vh;
+}
+
+body{
+    font-family: $text-font;
+}
+
+*:focus {
+    outline: none;
+}

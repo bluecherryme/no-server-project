@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { setRecipes } from './../reducers/supply-recipes.js';
+import './search-field.css';
 
 class SearchField extends Component{
     constructor(props){
@@ -24,21 +25,28 @@ class SearchField extends Component{
 
     render(){
         return(
-            <form 
-              className="search"
-              onSubmit={ this.handleSubmit }
-            >
-                <input 
-                  type="text" 
-                  className="search-field"
-                  placeholder="Start typing your available ingredients..."
-                  value={ this.state.searchTerm }   
-                  onChange= { this.handleChange }             
-                />
-                <button className="search-btn btn btn-primary">
-                   SEARCH RECIPES 
-                </button>
-            </form>
+            <div className="landing-top">
+                <div className="landing-top-left">
+                    <h1>Recipe Ideas</h1>
+                    <h3>Don't know what to cook?</h3>
+                    <h3>Tell us what you have in your pantry...</h3>
+                    <form 
+                    className="search"
+                    onSubmit={ this.handleSubmit }
+                    >
+                        <input 
+                        type="text" 
+                        className="search-field"
+                        placeholder="Start typing your available ingredients..."
+                        value={ this.state.searchTerm }   
+                        onChange= { this.handleChange }             
+                        />
+                        <button className="search-btn btn btn-primary">
+                        SEARCH RECIPES 
+                        </button>
+                    </form>
+                </div>
+            </div>
         );
     }
 }

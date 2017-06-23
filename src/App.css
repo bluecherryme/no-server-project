@@ -1,0 +1,10 @@
+@import url("https://fonts.googleapis.com/css?family=Great+Vibes|Raleway");
+.App {
+  width: 100wv;
+  height: 100vh; }
+
+body {
+  font-family: "Raleway", sans-serif; }
+
+*:focus {
+  outline: none; }
