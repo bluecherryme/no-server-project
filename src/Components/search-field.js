@@ -3,8 +3,8 @@ import { connect } from 'react-redux';
 import { setRecipes } from './../reducers/supply-recipes.js';
 
 class SearchField extends Component{
-    constructor(){
-        super();
+    constructor(props){
+        super(props);
 
         this.state = {searchTerm:''}
 
@@ -43,4 +43,4 @@ class SearchField extends Component{
     }
 }
 
-export default connect(state=>state||{},{setRecipes})(SearchField);
+export default connect(state => state || [], { setRecipes })(SearchField);

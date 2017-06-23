@@ -6,7 +6,7 @@ class RecipeView extends Component{
     render(){
         return(
             <div className="gallery">
-                {JSON.stringify(recipes)}
+                {JSON.stringify(this.props.recipes)}
             </div>
         );
     }
@@ -15,7 +15,7 @@ class RecipeView extends Component{
 function mapStateToProps(state){
     return(
        {recipes:state.recipes}                
-    )
+    );
 }
 
 export default connect(mapStateToProps)(RecipeView);
