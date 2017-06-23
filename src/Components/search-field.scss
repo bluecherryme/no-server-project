@@ -4,6 +4,7 @@ $text-font: 'Raleway', sans-serif;
 .landing-top{
     height: inherit;
     background-image:url('./../img/foodOnTable.jpeg');
+    background-attachment: fixed;
     background-size: cover; 
     border: 1px solid white;
 }

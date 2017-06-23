@@ -2,11 +2,11 @@ import axios from 'axios';
 import API_Key from './../API-Key';
 
 
-const initialState = { recipes: ['heee'] };
+const initialState = { recipes: [] };
 
 const SET_RECIPES = 'SET_RECIPES';
 
-export function setRecipes(searchTerm){
+export function setRecipes(searchTerm='potatoes,broccoli,bacon'){
     searchTerm = searchTerm.split(/[\W]+/).map(each=>each.toLowerCase()).join('%2C');
     return{
         type: SET_RECIPES,

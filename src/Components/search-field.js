@@ -23,6 +23,11 @@ class SearchField extends Component{
         this.setState({searchTerm:''});
     }
 
+    componentDidMount() {
+    this.props.setRecipes('potatoes,bacon,broccoli')
+  }
+    
+
     render(){
         return(
             <div className="landing-top">
@@ -37,7 +42,7 @@ class SearchField extends Component{
                         <input 
                         type="text" 
                         className="search-field"
-                        placeholder="Start typing your available ingredients..."
+                        placeholder="e.g. potatoes, bacon, broccoli..."
                         value={ this.state.searchTerm }   
                         onChange= { this.handleChange }             
                         />
