@@ -11,7 +11,7 @@ export function setRecipes(searchTerm='potatoes,broccoli,bacon'){
     return{
         type: SET_RECIPES,
         payload: axios.get(`https://spoonacular-recipe-food-nutrition-v1.p.mashape.com/recipes/findByIngredients?fillIngredients=false&ingredients=
-        ${searchTerm}&limitLicense=false&number=6&ranking=1`,
+        ${searchTerm}&limitLicense=false&number=9&ranking=1`,
         {
             headers:{"X-Mashape-Key" : API_Key,
                     "Accept" : "application/json"}

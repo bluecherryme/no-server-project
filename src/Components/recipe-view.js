@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import RecipeCard from './recipe-card';
+import { RecipeCard } from './recipe-card';
 import './recipe-view.css';
 
 
@@ -12,7 +12,7 @@ class RecipeView extends Component{
             <div className='container-fluid'>
                 <div className="recipe-gallery row">   
                     {recipes.map((recipe,index) =>{
-                        return RecipeCard(recipe.image, index);
+                        return <RecipeCard image={recipe.image} recipeID={recipe.id} key={recipe.id} title={recipe.title}/>;
                     })}        
                     
                 </div>

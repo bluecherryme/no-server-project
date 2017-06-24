@@ -2,4 +2,19 @@
     background-color: #513A31;
     background: no-repeat 50% 50%;
     background-size: cover;  
+    position: relative;
+}
+
+
+.recipe-header{
+    height: 40px;
+    width: 100%;
+    background-color: rgba(256,256,256,0.6);
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding-top: 10px;
+    margin-top: 10px;
+    color: #444;
+    font-weight: bold;
 }

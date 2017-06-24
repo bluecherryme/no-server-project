@@ -3,8 +3,7 @@
   height: inherit;
   background-image: url("./../img/foodOnTable.jpeg");
   background-attachment: fixed;
-  background-size: cover;
-  border: 1px solid white; }
+  background-size: cover; }
 
 .landing-top-left {
   width: 50vw;

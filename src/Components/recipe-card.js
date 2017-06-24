@@ -1,15 +1,37 @@
-import React from 'react';
+import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import { getRecipe } from './../reducers/reducer-detail-view.js';
 import './recipe-card.css';
 
+export class RecipeCard extends Component{
+    constructor(){
+        super();
 
+        this.handleClick = this.handleClick.bind(this);
+    }
 
-export default function RecipeCard(URL,id){
-    return(
-        <div key={id} className='col-md-4 recipe-card'
-            style={{"backgroundImage":`url(${URL})`}}>
-            >
-            
-                        
-        </div>
-    );
+    handleClick(e,ID) {
+    e.preventDefault();
+    getRecipe(ID);
+    }
+
+    render(){
+    var URL = this.props.image;
+    var title = this.props.title;
+    var ID = this.props.recipeID;
+        return(
+            <div className='col-md-4 recipe-card'
+                onClick={e=>this.handleClick(e,ID)} 
+                style={{"backgroundImage":`url(${URL})`}}>
+                >
+                <div className="recipe-header text-center">
+                    {title}
+                </div>
+                
+                                    
+            </div>
+        );
+    }
 }
+
+export default connect(state => state || {}, { getRecipe })(RecipeCard);
