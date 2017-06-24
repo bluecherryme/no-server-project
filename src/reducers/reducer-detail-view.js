@@ -9,7 +9,7 @@ const GET_RECIPE = 'GET_RECIPE';
 export function getRecipe(ID){
     return{
         type: GET_RECIPE,
-        payload: axios.get(`https://spoonacular-recipe-food-nutrition-v1.p.mashape.com/recipes/18078/information?includeNutrition=false`,
+        payload: axios.get(`https://spoonacular-recipe-food-nutrition-v1.p.mashape.com/recipes/${ID}/information?includeNutrition=false`,
         {
             headers:{"X-Mashape-Key" : API_Key,
                     "Accept" : "application/json"}
@@ -20,13 +20,17 @@ export function getRecipe(ID){
 
 
 export default function recipe(state = initialState,action){
+    console.log(action);
    switch (action.type){
        case GET_RECIPE + '_FULFILLED':
-         console.log(action.payload.data)
+         console.log('it worked');
          return{ recipe: action.payload.data }
        case GET_RECIPE + '_REJECTED':
+       console.log('rejected');
             break;
-       default: return state;
+       default: 
+       console.log('default');
+       return state;
    } 
 }
 

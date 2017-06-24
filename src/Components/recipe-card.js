@@ -4,8 +4,8 @@ import { getRecipe } from './../reducers/reducer-detail-view.js';
 import './recipe-card.css';
 
 export class RecipeCard extends Component{
-    constructor(){
-        super();
+    constructor(props){
+        super(props);
 
         this.handleClick = this.handleClick.bind(this);
     }
@@ -13,6 +13,7 @@ export class RecipeCard extends Component{
     handleClick(e,ID) {
     e.preventDefault();
     getRecipe(ID);
+    console.log('click');
     }
 
     render(){
@@ -34,4 +35,5 @@ export class RecipeCard extends Component{
     }
 }
 
-export default connect(state => state || {}, { getRecipe })(RecipeCard);
+
+export default connect(state => state.DetailView || [], { getRecipe })(RecipeCard);

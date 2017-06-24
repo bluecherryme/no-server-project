@@ -5,8 +5,7 @@ import './recipe-detail.css';
 
 
 class RecipeDetail extends Component{
-    render(){
-            console.log(this.props.recipe);       
+    render(){       
         return(
             <div className="detail-page">
                 <h1>Recipe Name</h1>
@@ -17,7 +16,8 @@ class RecipeDetail extends Component{
                     </div>
                     <div className="instructions">
                         Instructions or link to recipe
-                        {this.props.recipe}
+                        {JSON.stringify(this.props.recipe)}
+                        {console.log(this.props.recipe)}
                     </div>
                 </div>
             </div>
@@ -27,7 +27,7 @@ class RecipeDetail extends Component{
 
 function mapStateToProps(state){
     return(
-       {recipe:state.recipe}                
+       {recipe:state.DetailView.recipe}                
     );
 }
 

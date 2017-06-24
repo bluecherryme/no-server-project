@@ -8,6 +8,7 @@ class RecipeView extends Component{
     
     render(){
         var recipes = this.props.recipes;
+
         return(
             <div className='container-fluid'>
                 <div className="recipe-gallery row">   
@@ -26,7 +27,7 @@ class RecipeView extends Component{
 
 function mapStateToProps(state){
     return(
-       {recipes:state.recipes}                
+       {recipes:state.SupplyRecipes.recipes}                
     );
 }
 

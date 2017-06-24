@@ -19,7 +19,7 @@ class SearchField extends Component{
 
     handleSubmit(event){
         event.preventDefault();
-        this.props.setRecipes(this.state.searchTerm);
+        setRecipes(this.state.searchTerm);
         this.setState({searchTerm:''});
     }
 
@@ -56,4 +56,4 @@ class SearchField extends Component{
     }
 }
 
-export default connect(state => state || [], { setRecipes })(SearchField);
+export default connect(state => state.SupplyRecipes || {}, { setRecipes })(SearchField);
