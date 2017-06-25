@@ -19,7 +19,7 @@ class SearchField extends Component{
 
     handleSubmit(event){
         event.preventDefault();
-        setRecipes(this.state.searchTerm);
+        this.props.setRecipes(this.state.searchTerm);
         this.setState({searchTerm:''});
     }
 

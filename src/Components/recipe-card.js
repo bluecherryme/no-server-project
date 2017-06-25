@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import axios from 'axios';
 import API_Key from './../API-Key';
-import RecipeDetail from './recipe-detail/recipe-detail';
 import './recipe-card.css';
 
 export class RecipeCard extends Component{
@@ -33,15 +32,14 @@ export class RecipeCard extends Component{
     var ID = this.props.recipeID;
         return(
             <div className='col-md-4 recipe-card'
-                onClick={this.handleClick(ID)} 
+                onClick={()=>this.handleClick(ID)} 
                 style={{"backgroundImage":`url(${URL})`}}>
                 >
                 <div className="recipe-header text-center">
                     {title}
                 </div>
-                <div>
-                <RecipeDetail/>
-                </div>                    
+               
+                                    
             </div>
         );
     }

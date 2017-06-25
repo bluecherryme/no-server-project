@@ -12,3 +12,6 @@ body {
 .banner {
   height: 120px;
   background-color: #513A31; }
+  .banner h1 {
+    padding-top: 10px;
+    font-size: 50px; }
