@@ -1,20 +1,31 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { getRecipe } from './../reducers/reducer-detail-view.js';
+import axios from 'axios';
+import API_Key from './../API-Key';
+import RecipeDetail from './recipe-detail/recipe-detail';
 import './recipe-card.css';
 
 export class RecipeCard extends Component{
     constructor(props){
         super(props);
 
+        this.state = {recipe:{}}
+
         this.handleClick = this.handleClick.bind(this);
     }
 
-    handleClick(e,ID) {
-    e.preventDefault();
-    getRecipe(ID);
-    console.log('click');
+    
+
+    handleClick(ID) {
+    
+    axios.get(`https://spoonacular-recipe-food-nutrition-v1.p.mashape.com/recipes/${ID}/information?includeNutrition=false`,
+        {
+            headers:{"X-Mashape-Key" : API_Key,
+                    "Accept" : "application/json"}
+        })
+        .then((payload)=>this.setState({ recipe: payload.data }))
     }
+    
 
     render(){
     var URL = this.props.image;
@@ -22,18 +33,19 @@ export class RecipeCard extends Component{
     var ID = this.props.recipeID;
         return(
             <div className='col-md-4 recipe-card'
-                onClick={e=>this.handleClick(e,ID)} 
+                onClick={this.handleClick(ID)} 
                 style={{"backgroundImage":`url(${URL})`}}>
                 >
                 <div className="recipe-header text-center">
                     {title}
                 </div>
-                
-                                    
+                <div>
+                <RecipeDetail/>
+                </div>                    
             </div>
         );
     }
 }
 
 
-export default connect(state => state.DetailView || [], { getRecipe })(RecipeCard);
+export default connect()(RecipeCard);

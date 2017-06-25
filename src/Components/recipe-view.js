@@ -27,7 +27,7 @@ class RecipeView extends Component{
 
 function mapStateToProps(state){
     return(
-       {recipes:state.SupplyRecipes.recipes}                
+       {recipes:state.recipes}                
     );
 }
 

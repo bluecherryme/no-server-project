@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { connect } from 'react-redux';
 import Ingredients from './ingredients';
 import './recipe-detail.css';
 
@@ -16,8 +15,6 @@ class RecipeDetail extends Component{
                     </div>
                     <div className="instructions">
                         Instructions or link to recipe
-                        {JSON.stringify(this.props.recipe)}
-                        {console.log(this.props.recipe)}
                     </div>
                 </div>
             </div>
@@ -25,10 +22,5 @@ class RecipeDetail extends Component{
     }
 }
 
-function mapStateToProps(state){
-    return(
-       {recipe:state.DetailView.recipe}                
-    );
-}
 
-export default connect(mapStateToProps)(RecipeDetail);
+export default RecipeDetail;
