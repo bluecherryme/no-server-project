@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import SearchField from './Components/search-field';
 import RecipeView from './Components/recipe-view';
+import RecipeDetail from './Components/recipe-detail/recipe-detail'
 import './App.css';
 import 'animate.css';
 
@@ -13,6 +14,7 @@ class App extends Component {
             <h1 className="animated fadeInLeft">- Bon Appetit! -</h1>
         </div>
         <RecipeView />
+        <RecipeDetail/>
         <div className="banner container-fluid"></div>
         
       </div>

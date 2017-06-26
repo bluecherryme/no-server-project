@@ -1,0 +1,24 @@
+.ingredients {
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+  .ingredients li {
+    list-style: none;
+    font-size: 18px; }
+  .ingredients ul {
+    text-align: right;
+    width: 50%;
+    border-right: 1px solid #513A31;
+    padding-right: 20px; }
+  .ingredients h4 {
+    font-size: 25px; }
+
+.instructions {
+  width: 50%;
+  text-align: left;
+  padding-left: 20px;
+  font-size: 17px; }
+
+.details {
+  display: flex;
+  margin: 25px auto; }
