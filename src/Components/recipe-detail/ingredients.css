@@ -22,3 +22,12 @@
 .details {
   display: flex;
   margin: 25px auto; }
+
+@media screen and (max-width: 470px) {
+  .instructions {
+    font-size: 15px; }
+  .ingredients li {
+    font-size: 15px;
+    border-bottom: 1px solid #513A31;
+    padding-top: 4px;
+    padding-bottom: 4px; } }

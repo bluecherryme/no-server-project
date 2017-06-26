@@ -10,7 +10,7 @@ class RecipeView extends Component{
         var recipes = this.props.recipes;
 
         return(
-            <div className='container-fluid'>
+            <div className='container-fluid cards'>
                 <div className="recipe-gallery row">   
                     {recipes.map((recipe,index) =>{
                         return <RecipeCard image={recipe.image} recipeID={recipe.id} key={recipe.id} title={recipe.title}/>;

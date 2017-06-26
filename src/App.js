@@ -23,6 +23,7 @@ class App extends Component {
   
         </div>
         <RecipeView />
+        <div className="banner container-fluid"></div>
         <RecipeDetail/>
         <div className="banner container-fluid">
             <marquee

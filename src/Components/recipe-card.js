@@ -27,19 +27,18 @@ export class RecipeCard extends Component{
     
 
     render(){
+        console.log(this.state);
     var URL = this.props.image;
     var title = this.props.title;
     var ID = this.props.recipeID;
         return(
             <div className='col-md-4 recipe-card'
-                onClick={console.log(ID)} 
+                onClick={()=>this.handleClick(ID)} 
                 style={{"backgroundImage":`url(${URL})`}}>
                 >
                 <div className="recipe-header text-center">
                     {title}
-                </div>
-               
-                                    
+                </div>                                   
             </div>
         );
     }
