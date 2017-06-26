@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css?family=Great+Vibes|Raleway");
 .App {
   width: 100wv;
-  height: 90vh; }
+  height: 85vh; }
 
 body {
   font-family: "Raleway", sans-serif; }
@@ -15,3 +15,6 @@ body {
   .banner h1 {
     padding-top: 10px;
     font-size: 50px; }
+
+marquee {
+  width: 100vw; }
